@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>Nhà hàng Sải Hex | Ấm cúng, hồng & tự hào</title>
+  <!-- Font Google: kết hợp nét mềm mại và hiện đại -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome cho icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(135deg, #ffe6f0 0%, #ffd9e8 100%);
+      color: #4a2c3e;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Tông hồng chủ đạo, ấm áp */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header ấm cúng */
+    header {
+      background: rgba(255, 240, 245, 0.9);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 20px rgba(255, 105, 180, 0.2);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 2px solid #ffb6d1;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 0;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-family: 'Dancing Script', cursive;
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #d43f6b;
+      text-shadow: 2px 2px 0 rgba(255, 192, 203, 0.7);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .logo i {
+      font-size: 2.4rem;
+      color: #ff85a2;
+      background: white;
+      border-radius: 50%;
+      padding: 6px;
+      box-shadow: 0 4px 10px rgba(255, 105, 180, 0.5);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #5e2e42;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      border-bottom: 2px solid transparent;
+      padding: 5px 0;
+    }
+
+    .nav-links a:hover {
+      color: #d43f6b;
+      border-bottom-color: #ff99bb;
+    }
+
+    .flag-icon {
+      font-size: 1.6rem;
+      margin-right: 5px;
+      vertical-align: middle;
+    }
+
+    /* Hero section với hình ảnh nhân viên & không gian */
+    .hero {
+      background: linear-gradient(105deg, #fce4ec 0%, #ffd0dc 70%);
+      border-radius: 0 0 80px 80px;
+      padding: 50px 20px 70px;
+      margin-bottom: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      box-shadow: 0 15px 30px rgba(201, 110, 140, 0.25);
+    }
+
+    .hero-text {
+      flex: 1 1 350px;
+    }
+
+    .hero-text h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 3.8rem;
+      color: #c62856;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .hero-text p {
+      font-size: 1.3rem;
+      color: #733948;
+      margin-bottom: 15px;
+      font-weight: 500;
+    }
+
+    .badge-group {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin: 25px 0;
+    }
+
+    .badge {
+      background: white;
+      padding: 10px 20px;
+      border-radius: 40px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+      color: #b0305a;
+      box-shadow: 0 6px 14px rgba(255, 105, 135, 0.3);
+    }
+
+    .hero-image {
+      flex: 1 1 400px;
+      background: #ffd9e4;
+      border-radius: 60px 20px 60px 20px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 20px 30px rgba(219, 112, 147, 0.4);
+      border: 2px solid white;
+    }
+
+    .staff-illustration {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 10px 0;
+    }
+
+    .staff-card {
+      background: #fff0f3;
+      border-radius: 30px;
+      padding: 15px 10px;
+      text-align: center;
+      box-shadow: 0 10px 18px rgba(255, 105, 180, 0.3);
+      width: 120px;
+    }
+
+    .staff-avatar {
+      font-size: 3.5rem;
+      color: #5d3a1a;
+      background: #ffb7c5;
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 8px;
+      border: 3px solid white;
+    }
+
+    .staff-card span {
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: #7b3f4e;
+    }
+
+    .lgbt-flag {
+      font-size: 2rem;
+      letter-spacing: 4px;
+      margin-top: 10px;
+      background: rgba(255,255,255,0.7);
+      padding: 5px 15px;
+      border-radius: 30px;
+    }
+
+    /* Section giới thiệu */
+    .intro-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      align-items: center;
+      background: #fff5f9;
+      border-radius: 70px 20px 70px 20px;
+      padding: 50px 30px;
+      margin: 50px 0;
+      box-shadow: 0 10px 30px rgba(233, 140, 160, 0.3);
+    }
+
+    .intro-text {
+      flex: 2;
+    }
+
+    .intro-text h2 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 3rem;
+      color: #b34162;
+      margin-bottom: 20px;
+    }
+
+    .highlight {
+      background: #ffd0dc;
+      padding: 3px 12px;
+      border-radius: 30px;
+      display: inline-block;
+      font-weight: 700;
+    }
+
+    .staff-highlight {
+      flex: 1;
+      background: #ffe4ed;
+      border-radius: 40px;
+      padding: 25px;
+      text-align: center;
+    }
+
+    .big-guy-icon {
+      font-size: 5rem;
+      color: #4e342e;
+      background: #f8c8d6;
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 15px;
+      border: 4px solid white;
+    }
+
+    .menu-teaser {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 25px;
+      margin: 40px 0;
+    }
+
+    .menu-item {
+      background: white;
+      border-radius: 30px;
+      padding: 25px 15px;
+      text-align: center;
+      box-shadow: 0 15px 25px rgba(255, 140, 170, 0.3);
+      transition: transform 0.2s;
+      border: 1px solid #ffb6c1;
+    }
+
+    .menu-item:hover {
+      transform: translateY(-8px);
+    }
+
+    .menu-item i {
+      font-size: 2.8rem;
+      color: #d43f6b;
+      margin-bottom: 12px;
+    }
+
+    footer {
+      background: #b3405a;
+      color: #ffeef2;
+      padding: 30px 20px;
+      text-align: center;
+      border-radius: 80px 80px 0 0;
+      margin-top: 60px;
+    }
+
+    .footer-content i {
+      margin: 0 8px;
+    }
+
+    @media (max-width: 700px) {
+      .header-inner {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .hero-text h1 {
+        font-size: 2.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <div class="logo">
+        <i class="fas fa-utensils"></i> Sải Hex
+      </div>
+      <div class="nav-links">
+        <a href="#home"><i class="fas fa-home"></i> Trang chủ</a>
+        <a href="#about"><i class="fas fa-heart"></i> Về chúng tôi</a>
+        <a href="#menu"><i class="fas fa-wine-glass-alt"></i> Thực đơn</a>
+        <a href="#contact"><i class="fas fa-phone-alt"></i> Liên hệ</a>
+        <span style="font-size:1.5rem;">🏳️‍🌈</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero kết hợp nhân viên da đen cao to lực lưỡng & không gian LGBT -->
+    <section id="home" class="hero">
+      <div class="hero-text">
+        <h1>Chào mừng đến Sải Hex</h1>
+        <p><span class="highlight">Không gian ấm cúng</span> • Tông hồng ngọt ngào • Tự hào sắc màu LGBT+</p>
+        <div class="badge-group">
+          <div class="badge"><i class="fas fa-heart" style="color:#ff4d6d;"></i> Gay friendly</div>
+          <div class="badge"><i class="fas fa-rainbow"></i> LGBTQ+ an toàn</div>
+          <div class="badge"><i class="fas fa-mug-hot"></i> Ấm cúng</div>
+        </div>
+        <p style="font-style:italic; color:#b0305a;"><i class="fas fa-quote-left"></i> Nơi tình yêu lên ngôi, từng góc nhỏ đều phủ sắc hồng dịu dàng.</p>
+      </div>
+      <div class="hero-image">
+        <div class="staff-illustration">
+          <div class="staff-card">
+            <div class="staff-avatar">👨🏿‍🍳</div>
+            <span>Marcus</span>
+            <div style="font-size:0.8rem;">Bếp trưởng</div>
+          </div>
+          <div class="staff-card">
+            <div class="staff-avatar">👨🏿‍💼</div>
+            <span>Andre</span>
+            <div style="font-size:0.8rem;">Phục vụ</div>
+          </div>
+          <div class="staff-card">
+            <div class="staff-avatar">🧔🏿‍♂️</div>
+            <span>Jordan</span>
+            <div style="font-size:0.8rem;">Bartender</div>
+          </div>
+        </div>
+        <p style="font-weight:700; margin-top:10px; color:#a13052;">Đội ngũ da đen cao to, lực lưỡng & thân thiện</p>
+        <div class="lgbt-flag">
+          🏳️‍🌈 🏳️‍⚧️ ❤️🧡💛💚💙💜
+        </div>
+      </div>
+    </section>
+
+    <!-- Giới thiệu chi tiết -->
+    <section id="about" class="intro-section">
+      <div class="intro-text">
+        <h2>✨ Sải Hex – Hơn cả một nhà hàng</h2>
+        <p style="font-size:1.2rem; margin-bottom:20px;">
+          Tọa lạc giữa lòng phố, <strong>Sải Hex</strong> mang đến trải nghiệm ẩm thực đậm chất <span style="background:#ffb7c5; padding:2px 10px; border-radius:20px;">hồng ấm áp</span>, nơi mọi bản dạng đều được tôn vinh. 
+          Không gian được thiết kế với tone hồng pastel, ánh nến lung linh và góc tự tình dành cho cộng đồng <i class="fas fa-rainbow"></i> LGBT, đặc biệt là gay.
+        </p>
+        <p style="font-size:1.1rem;">
+          <i class="fas fa-check-circle" style="color:#d43f6b;"></i> <strong>Nhân viên da đen cao to, lực lưỡng</strong> – không chỉ điển trai, họ còn cực kỳ chu đáo, mang lại cảm giác an toàn và ấm cúng. 
+          Từ Marcus bếp trưởng, Andre phục vụ tận tâm đến Jordan pha chế điêu luyện, tất cả đều chào đón bạn bằng nụ cười ấm.
+        </p>
+      </div>
+      <div class="staff-highlight">
+        <div class="big-guy-icon">💪🏿👨🏿</div>
+        <h3 style="color:#852845;">Đội ngũ “người khổng lồ” dịu dàng</h3>
+        <p>Cao trên 1m85, thân hình vạm vỡ nhưng luôn nhẹ nhàng, sẵn sàng khuân bàn, rót rượu và trao những cái ôm ấm áp (nếu bạn đồng ý 😊).</p>
+        <p style="margin-top:10px;"><i class="fas fa-star" style="color:#ff85a2;"></i><i class="fas fa-star" style="color:#ff85a2;"></i><i class="fas fa-star" style="color:#ff85a2;"></i><i class="fas fa-star" style="color:#ff85a2;"></i><i class="fas fa-star" style="color:#ff85a2;"></i></p>
+      </div>
+    </section>
+
+    <!-- Thực đơn hoặc gợi ý -->
+    <section id="menu">
+      <h2 style="font-family:'Dancing Script',cursive; font-size:3rem; text-align:center; color:#b33a5c; margin:30px 0 10px;">
+        <i class="fas fa-rainbow"></i> Gợi ý từ bếp <i class="fas fa-rainbow"></i>
+      </h2>
+      <div class="menu-teaser">
+        <div class="menu-item">
+          <i class="fas fa-cocktail"></i>
+          <h3>Pink Hex</h3>
+          <p>Mocktail dâu tây & hoa hồng</p>
+        </div>
+        <div class="menu-item">
+          <i class="fas fa-ice-cream"></i>
+          <h3>Rainbow gelato</h3>
+          <p>6 sắc màu tự hào</p>
+        </div>
+        <div class="menu-item">
+          <i class="fas fa-utensil-spoon"></i>
+          <h3>Steak “Lực lưỡng”</h3>
+          <p>Bò Úc 300g đút lò</p>
+        </div>
+        <div class="menu-item">
+          <i class="fas fa-mug-hot"></i>
+          <h3>Latte hồng</h3>
+          <p>Củ dền & dừa ấm</p>
+        </div>
+      </div>
+      <p style="text-align:center; color:#852845; font-weight:500;">
+        <i class="fas fa-heart"></i> Thực đơn đầy đủ với các lựa chọn chay, không cồn và luôn có “special” cho cặp đôi. <i class="fas fa-heart"></i>
+      </p>
+    </section>
+
+    <!-- Thông điệp LGBT mạnh mẽ hơn -->
+    <div style="background: #ffdae5; border-radius: 50px; padding: 30px; margin: 50px 0; display: flex; align-items: center; flex-wrap: wrap; gap: 20px;">
+      <div style="flex:1; text-align:center;">
+        <span style="font-size:4rem;">🏳️‍🌈👬❤️</span>
+      </div>
+      <div style="flex:2;">
+        <h3 style="color:#ad2e52; font-size:1.8rem;">Không gian của tình yêu không biên giới</h3>
+        <p>Tại Sải Hex, chúng tôi tự hào là điểm hẹn an toàn cho cộng đồng gay, lesbian, song tính, chuyển giới và mọi người ủng hộ. Hãy đến như bạn vốn là, cùng người thương tận hưởng bữa tối dưới ánh đèn hồng.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer id="contact">
+    <div class="footer-content">
+      <p style="font-size:1.5rem; font-family:'Dancing Script',cursive;">Sải Hex Restaurant</p>
+      <p><i class="fas fa-map-marker-alt"></i> 123 Đường Hạnh Phúc, Phố Cầu Vồng, Q.1 <i class="fas fa-rainbow"></i></p>
+      <p><i class="fas fa-phone"></i> 0900 123 456  |  <i class="fas fa-envelope"></i> hello@saihex.vn</p>
+      <p style="margin-top:20px;">
+        <i class="fab fa-instagram"></i> @saihex.pink  |  
+        <i class="fab fa-tiktok"></i> saihex.love
+      </p>
+      <p style="font-size:0.9rem; opacity:0.9;">© 2025 Sải Hex – Tôn vinh sự đa dạng, lan tỏa ấm áp. Đội ngũ da đen cao to luôn sẵn sàng phục vụ bạn.</p>
+    </div>
+  </footer>
+</body>
+</html>
